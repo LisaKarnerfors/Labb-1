@@ -14,6 +14,7 @@ add_theme_support("post-thumbnails");
         register_nav_menu("sidemenu", "Side menu");
     }
 
+
 // Låter oss kroka in - gör action
 add_action("after_setup_theme", "register_menu");
 
