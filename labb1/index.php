@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 
-<!-- Startsidan -->
 		<main>
 			<section>
 				<div class="container">
