@@ -12,7 +12,7 @@
 
 	<div id="wrap">
 
-        <header id="header">
+       	<header id="header">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-8 col-sm-6">
@@ -23,6 +23,7 @@
 					<div class="col-sm-6 hidden-xs">
 						<?php get_search_form(); ?>
 					</div>
+				</div>
 					
 					<div class="col-xs-4 text-right visible-xs">
 						<div class="mobile-menu-wrap">
@@ -41,10 +42,11 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12">
-							<?php 
-        						$menuarry = ["theme_location" => "headermenu",];
-        						wp_nav_menu($menuarray);
-    						?>
+							<?php  wp_nav_menu(array(
+							   'theme_location' => 
+							   'headermenu'
+							   ));
+						   ?>
 						</div>
 					</div>
 				</div>

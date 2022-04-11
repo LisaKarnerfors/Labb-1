@@ -1,9 +1,7 @@
 
 <?php get_header();?>
 
-
-
-<main>
+		<main>
 			<section>
 				<div class="container">
 					<div class="row">
@@ -19,7 +17,13 @@
 
 						<aside id="secondary" class="col-xs-12 col-md-3">
 							<ul class="side-menu">
-							<!-- menyn -->
+								<li>
+    						     <?php wp_nav_menu(array(
+									'theme_location' => 
+									'sidemenu'
+									));
+								?>
+								</li>
 							</ul>
 						</aside> 
 
