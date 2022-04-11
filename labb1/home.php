@@ -1,5 +1,3 @@
-<!-- Flöde/samlingsida för blogginlägg -->
-
 <?php get_header(); ?>
 
 		<main>
@@ -13,7 +11,7 @@
 								   <?php
                 						while (have_posts()) {
                 							the_post();?>
-                            			<?php the_post_thumbnail();?>
+                            			<?php the_post_thumbnail("blogImage_size");?>
 
                             			<h2 class="title">
 											<a href="<?php the_permalink();?>">
