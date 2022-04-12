@@ -2,25 +2,26 @@
 		<footer id="footer">
 			<div class="container">
 				<div class="row top">
+					<!-- Se över CSS i footern -->
 					<div class="col-xs-12 col-sm-6 col-md-4">
 
-					 <!-- Widgets för innehåll "Kort om oss" -->
+					 <!-- Widget för innehåll "Kort om oss" -->
+						 <?php dynamic_sidebar("widgetfooter1");?>
 					</div>
 					<div class="col-xs-12 col-sm-3 col-md-3 col-md-offset-1">
-					<!-- Widgets för innehåll "Kontaktuppgifter" -->
+					<!-- Widget för innehåll "Kontaktuppgifter" -->
+						<?php dynamic_sidebar("widgetfooter2");?>
 					</div>
 					
+					<!-- Widget "Sociala media" -->
 					<div class="col-xs-12 col-sm-3 col-md-3 col-md-offset-1">
-						<?php wp_nav_menu(array(
-		   						'theme_location' => 
-		   						'footermenu'
-		   						));
-							?>	
+						<?php dynamic_sidebar("widgetfooter3");?>
 					</div>
 
+					<!-- Widget Copyright -->
 					<div class="row bottom">
 						<div class="col-xs-12">
-							<p>Copyright &copy; Grupp X, 2016</p>
+							<?php dynamic_sidebar("copyright");?>
 						</div>
 					</div>
 				</div>

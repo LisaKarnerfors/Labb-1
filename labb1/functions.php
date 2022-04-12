@@ -4,7 +4,7 @@ include('enqueue.php');
 
 // Adderar features, menu & widegt-support på sidor
 add_theme_support("menus");
-add_theme_support("widgets");
+add_theme_support('widgets');
 add_theme_support("post-thumbnails");
 
 // Lägg till menyer - header, footer & sidemenu. 
@@ -22,13 +22,6 @@ add_action("after_setup_theme", "register_menu");
 add_image_size("blogImage_size", 635, 423, true );
 
 
-// Widget för kontaktformulär 
-
-
-
-// Lägg till Widget och registrerar - Krav på inlämningsuppgiften
-/* VG - sidbar ska kunna redigeras - använd widget */
-
 // Widget för sidebar
 function widget_sidebar() {
 
@@ -39,10 +32,24 @@ function widget_sidebar() {
             "description" => "Sidebar menu"
         ]
     );
-
 }
 
 add_action("after_setup_theme", "widget_sidebar",);
+
+
+// Widget för Copyright
+function widget_copyright() {
+
+    register_sidebar(
+        [
+            "name" => "copyright footer",
+            "id" => "copyright",
+            "description" => "Copyright footer"
+        ]
+    );
+}
+
+add_action("after_setup_theme", "widget_copyright",);
 
 
 // Footer widgets
@@ -67,7 +74,7 @@ register_sidebar(
 register_sidebar(
     [
         "name" => "widget footer3",
-        "id" => "widgefootert3",
+        "id" => "widgetfooter3",
         "description" => "Social media icons"
     ]
 );
@@ -75,7 +82,6 @@ register_sidebar(
 }
 
 add_action("after_setup_theme", "widget_footer");
-
 
 ?>
 
