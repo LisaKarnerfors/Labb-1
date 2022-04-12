@@ -11,7 +11,7 @@
 						<?php
                 			while (have_posts()) {
             					the_post();?>
-                        	<?php the_post_thumbnail("blogImage_size");?>
+                        	<?php the_post_thumbnail("blogImage_size");?> <!-- Se över storlek på bilder -->
                             <h2 class="title">
 								<a href="<?php the_permalink();?>">
 								<h1><?php the_title(); ?></h1></a>
@@ -28,9 +28,20 @@
 							<p><?php the_excerpt();?></p>
 						<?php } ?>
 					</article>
+
+					
+					<aside id="secondary" class="col-xs-12 col-md-3">
+						<div id="sidebar">
+    						<ul role="navigation">
+								<li class="pagenav">
+                				<?php dynamic_sidebar("sidebar-menu");?>
+                				</li>
+							</ul>
+						</div>
+					</aside>
                          
-					<!-- Se över detta.... -->
-                 	<nav class="navigation pagination">
+					<!-- Se över CSS -->
+               <!--   	<nav class="navigation pagination"> -->
 						<h2 class="screen-reader-text"></h2>
 				 			<?php the_posts_pagination( array(
     							'mid_size'  => 2,
@@ -38,7 +49,7 @@
     							'next_text' => __( 'Nästa', 'textdomain' ),
 								));
 							?>	
-					</nav>
+				<!-- 	</nav> -->
 <!-- 
 							<nav class="navigation pagination">
 								<h2 class="screen-reader-text">Inläggsnavigering</h2>
@@ -48,7 +59,9 @@
 								<a class="next page-numbers" href="">Nästa</a>
 							</nav> -->
 
-                </div>
+							
+
+               <!--  </div> -->
             </div>
 		</div>
 	</section>
