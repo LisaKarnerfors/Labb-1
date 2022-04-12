@@ -12,7 +12,7 @@
 						<p><?php the_content(); ?></p> 
 				</div>
 				<div class="col-xs-12 col-sm-4 col-md-6">
-					<?php the_post_thumbnail(); ?>
+					<?php the_post_thumbnail(); ?> <!-- Se över storlek på bilder -->
 				<?php } ?>
 				</div>
 			</div>
